@@ -7,7 +7,7 @@ function binerySearch(arr, target) {
 
     if (target === arr[mid]) {
       return mid;
-    } else if (aee[mid] < target) {
+    } else if (target > arr[mid]) {
       left = mid + 1;
     } else {
       right = mid - 1;
