@@ -40,9 +40,27 @@ class BinarySearchTree {
       }
     }
   }
+
+  preOrder(root) {
+    if (root) {
+      console.log(root.value);
+      this.preOrder(root.left);
+      this.preOrder(root.right);
+    }
+  }
+
+  inOrder(root) {
+    if (root) {
+      this.inOrder(root.left);
+      console.log(root.value);
+      this.inOrder(root.right);
+    }
+  }
 }
 
 const bst = new BinarySearchTree();
 console.log(bst.isEmpty());
 bst.insert(5);
 bst.insert(10);
+
+bst.inOrder(bst.root);
